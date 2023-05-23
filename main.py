@@ -17,6 +17,7 @@ def logica_uri(uri):
     response = requests.get(image_url, headers=headers, proxies=proxies, verify=False)
     img = re.findall("https:\/\/files1\.comics\.org\/\/img\/gcd\/covers_by_id\/.*\.jpg", response.text)
     # img_name = re.findall("https:\/\/files1\.comics\.org\/\/img\/gcd\/covers_by_id\/.*\.jpg",response.text)
+    # setting image name for download.
     image_name = re.findall("https:\/\/files1\.comics\.org\/\/img\/gcd\/covers_by_id\/.*\/(.*)\.jpg", img[0])
     print(img[0])
     print(image_name)
