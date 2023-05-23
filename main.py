@@ -21,7 +21,7 @@ def logica_uri(uri):
     print(img[0])
     print(image_name)
     img_data = requests.get(img[0]).content
-    with open('{}.jpg'.format(image_name), 'wb') as handler:
+    with open('{}.jpg'.format(image_name[0]), 'wb') as handler:
         handler.write(img_data)
 
 
